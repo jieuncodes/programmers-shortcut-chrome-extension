@@ -23,7 +23,7 @@
   "commands": {
     "run_code": {
       "suggested_key": {
-        "default": "Ctrl+U"
+        "default": "Ctrl+Shift+U"
       },
       "description": "Run code on programmers.com"
     },
