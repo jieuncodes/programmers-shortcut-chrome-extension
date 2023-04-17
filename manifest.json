@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Programmers Shortcut",
   "version": "1.0",
-  "description": "Add a keyboard shortcut to run code on programmers.com",
+  "description": "Add keyboard shortcuts to run and submit code on programmers.com",
   "permissions": ["tabs", "scripting"],
   "host_permissions": ["https://*.programmers.co.kr/*"],
   "action": {
@@ -21,9 +21,15 @@
     }
   ],
   "commands": {
-    "run_code": {
+    "submit_answer": {
       "suggested_key": {
         "default": "Ctrl+K"
+      },
+      "description": "Submit answer on programmers.com"
+    },
+    "run_code": {
+      "suggested_key": {
+        "default": "Ctrl+U"
       },
       "description": "Run code on programmers.com"
     }
