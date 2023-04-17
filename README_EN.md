@@ -19,7 +19,7 @@
         <td>Runs the code in the editor.</td>
       </tr>
       <tr>
-        <td>Cmd/Ctrl + S</td>
+        <td>Cmd/Ctrl + Shift + S</td>
         <td>Submits the answer for the current lesson.</td>
       </tr>
     </tbody>

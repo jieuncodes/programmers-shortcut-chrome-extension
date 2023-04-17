@@ -1,6 +1,11 @@
 chrome.commands.onCommand.addListener(async (command) => {
   console.log("Command received:", command);
-  let scriptToExecute = (command === "run_code") ? "content.js" : (command === "submit_code") ? "submit.js": null;
+  let scriptToExecute =
+    command === "run_code"
+      ? "content.js"
+      : command === "submit_answer"
+      ? "submit.js"
+      : null;
 
   let tabs = await chrome.tabs.query({ active: true, currentWindow: true });
 

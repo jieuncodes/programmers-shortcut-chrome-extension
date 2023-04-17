@@ -1,1 +1,1 @@
-document.getElementById('submit-code').click();
+document.getElementById("submit-code").click();

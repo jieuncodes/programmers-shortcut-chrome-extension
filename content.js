@@ -1,1 +1,1 @@
-document.getElementById('run-code').click();
+document.getElementById("run-code").click();

@@ -19,7 +19,7 @@
         <td>에디터에서 코드를 실행합니다.</td>
       </tr>
       <tr>
-        <td>Cmd/Ctrl + S</td>
+        <td>Cmd/Ctrl + Shift + S</td>
         <td>현재 테스트의 정답을 제출합니다.</td>
       </tr>
     </tbody>

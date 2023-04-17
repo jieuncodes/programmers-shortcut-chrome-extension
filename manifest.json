@@ -17,21 +17,21 @@
   "content_scripts": [
     {
       "matches": ["https://school.programmers.co.kr/learn/*"],
-      "js": ["content.js"]
+      "js": ["content.js", "submit.js"]
     }
   ],
   "commands": {
-    "submit_answer": {
-      "suggested_key": {
-        "default": "Ctrl+K"
-      },
-      "description": "Submit answer on programmers.com"
-    },
     "run_code": {
       "suggested_key": {
         "default": "Ctrl+U"
       },
       "description": "Run code on programmers.com"
+    },
+    "submit_answer": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      },
+      "description": "Submit answer on programmers.com"
     }
   },
   "icons": {
