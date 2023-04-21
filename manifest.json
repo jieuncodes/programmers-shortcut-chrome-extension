@@ -14,12 +14,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://school.programmers.co.kr/learn/*"],
-      "js": ["content.js", "submit.js"]
-    }
-  ],
   "commands": {
     "run_code": {
       "suggested_key": {
@@ -27,7 +21,7 @@
       },
       "description": "Run code on programmers.com"
     },
-    "submit_answer": {
+    "submit_code": {
       "suggested_key": {
         "default": "Ctrl+Shift+S"
       },

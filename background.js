@@ -1,30 +1,25 @@
-function executeCommand(command) {
-  console.log("command", command);
-  debugger;
-  let scriptToExecute =
-    command === "run_code"
-      ? "content.js"
-      : command === "submit_answer"
-      ? "submit.js"
-      : null;
-
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    if (tabs.length) {
-      const url = tabs[0].url;
-      if (url && url.startsWith("https://school.programmers.co.kr")) {
-        chrome.scripting.executeScript({
-          target: { tabId: tabs[0].id },
-          files: [scriptToExecute],
-        });
+chrome.commands.onCommand.addListener((command) => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs[0]) {
+      if (command === 'run_code') {
+        runCode(tabs[0].id);
+      } else if (command === 'submit_code') {
+        submitAnswer(tabs[0].id);
       }
     }
   });
+});
+
+function runCode(tabId) {
+  chrome.scripting.executeScript({
+    target: { tabId: tabId },
+    files: ['runCode.js']
+  });
 }
 
-chrome.commands.onCommand.addListener(async (command) => {
-  if (command === "run_code") {
-    executeCommand("run_code");
-  } else if (command === "submit_answer") {
-    executeCommand("submit_answer");
-  }
-});
+function submitAnswer(tabId) {
+  chrome.scripting.executeScript({
+    target: { tabId: tabId },
+    files: ['submitAnswer.js']
+  });
+}
