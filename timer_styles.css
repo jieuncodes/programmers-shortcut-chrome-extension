@@ -1,0 +1,141 @@
+body {
+    background-color: black;
+}
+
+#clockIcon {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    color: whitesmoke;
+}
+
+#tooltip {
+    display: none;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #55555575;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockIcon:hover #tooltip {
+    display: flex;
+}
+
+#timer {
+    color: white;
+    margin-left: -30px;
+}
+
+#timerContainer {
+    position: fixed;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 200px;
+    z-index: 9999;
+    background-color: rgba(43, 59, 72, 0.645);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+#startPauseButton {
+    margin-right: -40px;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: none;
+
+}
+
+/* input:focus {
+    outline: none;
+} */
+button {
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.closeButton {
+    font-size: 25px;
+}
+
+#resetButton {
+    font-size: 30px;
+}
+
+#hourInput,
+#minuteInput {
+    margin-left: 10px;
+    width: 20px;
+    background-color: transparent;
+    color: white;
+}
+
+#colonSpan {
+    color: white;
+}
+
+
+.timerContainer {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.closeButton {
+    margin-left: 10px;
+}
+
+.clockIcon {
+    position: fixed;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+}
+
+
+.startPauseButton {
+    margin-left: 10px;
+}
+
+.hourInput,
+.minuteInput {
+    margin-left: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -15,7 +15,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>Cmd/Ctrl + R</td>
+        <td>Cmd/Ctrl + Shit + U</td>
         <td>에디터에서 코드를 실행합니다.</td>
       </tr>
       <tr>

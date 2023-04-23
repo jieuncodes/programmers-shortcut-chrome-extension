@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Add keyboard shortcuts to run and submit code on programmers.com",
   "permissions": ["tabs", "scripting"],
-  "host_permissions": ["https://*.programmers.co.kr/*"],
+  "host_permissions": ["https://*.programmers.co.kr/learn/courses/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -30,5 +30,12 @@
   },
   "icons": {
     "48": "icon.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.programmers.co.kr/learn/courses/*"],
+      "js": ["content_script.js"],
+      "css": ["timer_styles.css"]
+    }
+  ]
 }

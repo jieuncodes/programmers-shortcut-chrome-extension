@@ -15,7 +15,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>Cmd/Ctrl + R</td>
+        <td>Cmd/Ctrl + Shit + U<</td>
         <td>Runs the code in the editor.</td>
       </tr>
       <tr>
