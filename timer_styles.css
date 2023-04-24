@@ -2,15 +2,23 @@ body {
     background-color: black;
 }
 
-#clockIcon {
+.hidden {
+    display: none;
+}
+
+.clockIcon {
     position: fixed;
+    width: 20px;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 9999;
+    z-index: 10000;
     color: whitesmoke;
+    font-size: 30px;
+}
+
+.clockIcon:hover #tooltip {
+    display: flex;
 }
 
 #tooltip {
@@ -30,28 +38,24 @@ body {
     align-items: center;
 }
 
-.clockIcon:hover #tooltip {
-    display: flex;
-}
-
-#timer {
-    color: white;
-    margin-left: -30px;
-}
-
 #timerContainer {
     position: fixed;
-    top: 55px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
     width: 200px;
+    height: 20px;
+    padding: 10px;
+    align-items: center;
     z-index: 9999;
     background-color: rgba(43, 59, 72, 0.645);
-    padding: 10px;
-    border: 1px solid black;
     border-radius: 5px;
     justify-content: space-between;
+    flex-direction: row;
+}
+
+#timerSpan {
+    color: white;
 }
 
 #startPauseButton {
@@ -63,12 +67,8 @@ input {
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: none;
-
 }
 
-/* input:focus {
-    outline: none;
-} */
 button {
     border: none;
     border-radius: 3px;
@@ -98,41 +98,17 @@ button {
     color: white;
 }
 
-
-.timerContainer {
-    display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 10000;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    align-items: center;
-}
-
 .closeButton {
     margin-left: 10px;
 }
 
-.clockIcon {
-    position: fixed;
-    width: 20px;
-    top: 10px;
-    right: 10px;
-    z-index: 10000;
-}
 
 
 .startPauseButton {
     margin-left: 10px;
 }
 
-.hourInput,
-.minuteInput {
-    margin-left: 10px;
-}
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

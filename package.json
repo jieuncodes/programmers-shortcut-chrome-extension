@@ -1,0 +1,11 @@
+{
+  "name": "programmers-shortcut-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content_script.js",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC"
+}

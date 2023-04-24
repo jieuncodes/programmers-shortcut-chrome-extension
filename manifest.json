@@ -34,7 +34,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.programmers.co.kr/learn/courses/*"],
-      "js": ["content_script.js"],
+      "js": ["dist/bundle.js"],
       "css": ["timer_styles.css"]
     }
   ]
